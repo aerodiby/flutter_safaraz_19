@@ -6,10 +6,10 @@ import 'package:flutter_application_1/component/custom_text_field.dart';
 
 class LoginClonePage extends StatelessWidget {
   const LoginClonePage({super.key});
-  static const Color inputBgColor = Color(0xFF111214);
-  static const Color primaryBlue = Color(0xFF5865F2);
-  static const Color passkeyBtnBg = Color(0xFF2B2D31);
-  static const Color textGray = Color(0xFF949BA4);
+  static const Color hitam = Color(0xFF111214);
+  static const Color biru = Color(0xFF5865F2);
+  static const Color abuGelap = Color(0xFF2B2D31);
+  static const Color abuTerang = Color(0xFF949BA4);
 
   @override
   Widget build(BuildContext context) {
@@ -52,25 +52,25 @@ class LoginClonePage extends StatelessWidget {
                 const Center(
                   child: Text(
                     "We're so excited to see you again!",
-                    style: TextStyle(fontSize: 14, color: textGray),
+                    style: TextStyle(fontSize: 14, color: abuTerang),
                   ),
                 ),
                 const SizedBox(height: 28),
 
                 const CustomLabel(text: "Email or Phone Number"),
                 const SizedBox(height: 8),
-                const CustomTextField(bgColor: inputBgColor),
+                const CustomTextField(bgColor: hitam),
                 const SizedBox(height: 20),
 
                 const CustomLabel(text: "Password"),
                 const SizedBox(height: 8),
                 CustomTextField(
-                  bgColor: inputBgColor,
+                  bgColor: hitam,
                   isPassword: true,
                   suffixIcon: IconButton(
                     icon: const Icon(
                       Icons.visibility_off_outlined,
-                      color: textGray,
+                      color: abuTerang,
                       size: 20,
                     ),
                     onPressed: () {},
@@ -84,8 +84,10 @@ class LoginClonePage extends StatelessWidget {
                 const SizedBox(height: 24),
 
                 CustomButton(
+                  width: 250,
+                  height: 50,
                   text: "Log In",
-                  backgroundColor: primaryBlue,
+                  backgroundColor: biru,
                   onPressed: () {},
                 ),
                 const SizedBox(height: 20),
@@ -100,7 +102,7 @@ class LoginClonePage extends StatelessWidget {
                       child: Text(
                         "OR",
                         style: TextStyle(
-                          color: textGray,
+                          color: abuTerang,
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
                         ),
@@ -113,8 +115,10 @@ class LoginClonePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 CustomButton(
+                  width: 250,
+                  height: 50,
                   text: "Log in with Passkey",
-                  backgroundColor: passkeyBtnBg,
+                  backgroundColor: abuGelap,
                   icon: const Icon(Icons.key, color: Colors.white, size: 20),
                   onPressed: () {},
                 ),

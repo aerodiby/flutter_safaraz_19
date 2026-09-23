@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTextfield extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController txtController;
   final String hintText;
 
-  const CustomTextfield({super.key, required this.controller, required this.hintText});
+  const CustomTextfield({super.key, required this.txtController, required this.hintText});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: controller,
+      inputFormatters: [
+        FilteringTextInputFormatter.digitsOnly
+      ],
+      keyboardType: TextInputType.number,
+      controller: txtController,
       
       decoration: InputDecoration(
         border: OutlineInputBorder(
