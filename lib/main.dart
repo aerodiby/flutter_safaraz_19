@@ -4,6 +4,7 @@ import 'package:flutter_application_1/Pages/login_clone_page.dart';
 import 'package:flutter_application_1/kalkulator_page.dart';
 import 'package:flutter_application_1/login_page.dart';
 import 'package:flutter_application_1/login_clone.dart';
+import 'package:flutter_application_1/routes.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(home: KalkulatorPage2(),);
+    return GetMaterialApp(
+      title: "My Learning App",
+      initialRoute: Routes.registration,
+      getPages: Routes.myPages,
+      );
   }
 }
